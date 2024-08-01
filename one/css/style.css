@@ -259,14 +259,20 @@ body {
 
 :root {
     --dark-text: #201f1f;
+    --dark-title: #18181b;
     --gray: #676767;
     --gray-text: #606060;
     --light-gray: #cbcbcb;
+    --gray-lines: #c5c5c5;
+    --light-gray-text: #cbd5e1;
+    --blue-gray: #334155;
     --white: #ffffff;
     --white-text: #f9f9f9;
     --purple: #6c5fbc;
     --purple-text: #5c4eae;
     --tranparent-text: rgba(32, 31, 31, 20%);
+    --light-purple: #c5bfed;
+    
 }
 
 /* header */
@@ -302,7 +308,9 @@ body {
 }
 
 .header__authorization {
+    display: flex;
     margin-left: auto;
+    gap: 10px;
 }
 
 .autorization__button {
@@ -327,24 +335,38 @@ body {
 
 /* hero */
 
+.hero {
+    margin-bottom: 80.5px;
+}
+
 .hero__container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 58.52px 0 96px;
+    padding: 0 59.52px 0 97px;
 }
 
-.hero__block_left {
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 37px;
+}
+
+.hero__block_left{
+    padding: 75px 0 45px;
     max-width: 568px;
 }
 
 .hero__text {
-    margin-bottom: 53px;
+    margin-bottom: 52px;
 }
 
 .hero__info {
+    display: inline-block;
     position: relative;
-    margin-bottom: 18px;
-    padding-left: 74px;
+    margin-bottom: 18.7px;
+    padding-left: 77px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     font-size: 15px;
     font-weight: 600;
     color: var(--tranparent-text);
@@ -372,6 +394,7 @@ body {
 
 .hero__descr {
     font-family: 'Inter';
+    max-width: 499px;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -384,7 +407,7 @@ body {
 
 .hero__btns {
     display: flex;
-    gap: 18px;
+    gap: 19px;
     margin-bottom: 33px;
     max-width: max-content;
 }
@@ -392,18 +415,272 @@ body {
 .hero__button {
     font-size: 16.27px;
     font-weight: 400;
-    letter-spacing: 1%;
+    letter-spacing: 1px;
     border-radius: 12.41px;
 }
 
 .hero__button_colored {
-    padding: 18px 31px 17px 30px;
+    padding: 20px 26px 19px 26.5px;
     color: var(--white);
     background-color: var(--purple);
 }
 
 .hero__button_transparent {
-    padding: 18px 28px 17px 27px;
+    padding: 20px 26px 19px 20px;
     color: var(--purple-text);
     border: 1.5px solid var(--purple);
+}
+
+.hero__review {
+    display: flex;
+    align-items: center;
+}
+
+.hero__counter {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--blue-gray);
+}
+
+.hero__image {
+    margin-right: 20px;
+    width: 122px;
+}
+
+.hero__rating {
+    margin-right: 7px;
+}
+
+.hero__rating .star {
+    width: 19.5px;
+    height: 19.5px;
+}
+
+.rating__star {
+    position: relative;
+    bottom: -3px;
+}
+
+.hero__counter {
+    position: relative;
+    bottom: -4px;
+}
+
+.hero__block_right {
+    position: relative;
+    min-width: 680.48px;
+    background-image: url(../imgs/hero__decor.png);
+    background-repeat: no-repeat;
+    background-position: 112px 94px;
+}
+
+.hero__decoration{
+    position: absolute;
+}
+
+.hero__decoration_grap {
+    width: 283px;
+    height: 307px;
+    bottom: -22px;
+    left: 13px;
+}
+
+.hero__decoration_card {
+    width: 384px;
+    height: 135px;
+    top: 30px;
+    right: 16px;
+}
+
+.hero__decoration_lines {
+    bottom: -2.5px;
+    left: 2px;
+}
+
+.hero__decoration_wave {
+    top: 3px;
+    right: 0;
+}
+
+.hero__decoration_arrow {
+    top: 149px;
+    right: 64px;
+}
+
+/*features  */
+
+.features {
+    margin-bottom: 103.5px;
+}
+
+.features__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 246px 0 294px;
+    background-image: url(../imgs/features-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.features__content {
+    padding: 57.5px 0 56px;
+}
+
+.features__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 263.7px;
+}
+
+.features__subtitle {
+    margin-bottom: 10px;
+    width: max-content;
+    font-family: 'Public Sans';
+    font-size: 43.2px;
+    font-weight: 700;
+    line-height: 54px;
+    color: var(--white);
+}
+
+.features__descr {
+    max-width: 217px;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 14.4px;
+    line-height: 21.6px;
+    color: var(--light-gray-text);
+}
+
+.features__descr:first-child {
+    max-width: 263.7px;
+    color: var(--light-purple);
+}
+
+.features__item:nth-child(2n) {
+    padding-left: 47px;
+    flex-grow: 10;
+}
+
+.features__item:nth-child(2n)::after {
+    position: absolute;
+    content: '';
+    top: -8px;
+    left: -13px;
+    width: 0.5px;
+    height: 115%;
+    background-color: var(--gray-lines);
+}
+
+.features__item:nth-child(2n)::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+    right: -62px;
+    width: 1px;
+    height: 115%;
+    background-color: var(--gray-lines);
+} 
+
+/* dowload app */
+
+.download-app__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 81px 0 97px;
+}
+
+
+.download-app__title {
+    margin-bottom: 62px;
+    font-family: 'Poppins';
+    font-size: 50.92px;
+    font-weight: 700;
+    line-height: 58.2px;
+    color: var(--dark-title);
+}
+
+.download-app__list {
+    margin-bottom: 63.4px;
+    padding: 3px 31px;
+    list-style: disc;
+}
+
+.download-app__item {
+    font-size: 20.33px;
+    color: var(--gray);
+}
+
+.download-app__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.download-app__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 92px 0;
+}
+
+.download-app__block_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 500px;
+    max-width: 1060px;
+}
+
+.download-app__block_text::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 304px;
+    height: 609px;
+    background-image: url('../imgs/mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.download-app__descr {
+    letter-spacing: -0.6px;
+    font-size: 20.33px;
+    font-weight: 400;
+    line-height: 30.5px;
+    color: var(--gray);
+}
+
+.download-app__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 26px 16px 26px;
+    max-width: 186px;
+    border-radius: 14.5px;
+    font-family: 'Poppins';
+    font-size: 18.06px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.download-app__block_button {
+    max-width: 334.76px;
+    height: 164.97px;
+}
+
+.download-app__decoration {
+    position: absolute;
+    bottom: 146px;
+    right: 229px;
 }
